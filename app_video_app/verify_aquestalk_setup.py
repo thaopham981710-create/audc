@@ -17,6 +17,7 @@ def verify_aquestalk_setup():
     voices_dir = os.path.join(aquestalk_dir, "aquestalk")
     
     issues = []
+    voices = []  # Initialize voices list
     
     # Check main directory
     print(f"\n1. Checking main directory: {aquestalk_dir}")
@@ -85,8 +86,8 @@ def verify_aquestalk_setup():
     print("\n" + "=" * 60)
     if not issues:
         print("✓ All checks passed! AquesTalk is properly set up.")
-        print("\nThe following voices are available:")
-        if 'voices' in locals():
+        if voices:
+            print("\nThe following voices are available:")
             for voice in voices:
                 print(f"  - {voice}")
         return 0
