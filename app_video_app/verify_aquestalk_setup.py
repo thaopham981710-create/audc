@@ -36,7 +36,6 @@ def verify_aquestalk_setup():
         print(f"   ✓ Directory exists")
         
         # List voices
-        voices = []
         for entry in sorted(os.listdir(voices_dir)):
             entry_path = os.path.join(voices_dir, entry)
             if os.path.isdir(entry_path):
